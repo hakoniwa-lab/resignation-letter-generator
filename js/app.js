@@ -29,6 +29,7 @@ function buildCrossLinkBanners() {
     { href: "../retirement-simulator/", text: "退職金の手取り額も計算してみる →" },
     { href: "../career-checker/", text: "退職を切り出しにくい方は転職エージェント診断もチェック →" },
     { href: "../insurance-checker/", text: "退職後の保障を保険診断で確認する →" },
+    { href: "../subsidy-checker/", text: "退職後に使える公的な給付金・補助金を給付金・補助金診断で確認する →" },
   ];
   return banners.map((b) => `<a class="cross-link-banner" href="${escapeHtml(b.href)}">${escapeHtml(b.text)}</a>`).join("");
 }
