@@ -48,3 +48,8 @@ resignation-letter-generator/
 ## デプロイ
 
 `resignation-letter-generator/` フォルダをそのまま `hakoniwa-lab` アカウント配下の新規リポジトリ(`hakoniwa-lab/resignation-letter-generator`)にpushし、GitHub Pages(ブランチ`main`・ルート)を有効化する。git commitのauthor設定は、このリポジトリのローカル`git config`で`hakoniwa-lab <309971408+hakoniwa-lab@users.noreply.github.com>`に設定すること(globalのペルソナ設定を変更しない)。
+
+## 2026-11-10 履歴書の学歴欄の自動計算 `rirekisho-gakureki/`
+
+- `js/gakureki.js`(前半が計算、後半が画面)。生年月日と最終学歴から入学・卒業の年月を和暦・西暦で出す。早生まれ(1/1〜4/1は生まれ年+6、学校教育法17条を e-Gov で確認)、浪人・留年、大学院、卒業見込み、学校名、タブ区切りのコピー
+- 入力は保存しない。ページは手書き(site_nav の apply_html を一度通した)。転校・海外・秋入学は対象外とページに明記

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTBHV5QYG3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WTBHV5QYG3');
+</script>
+<title>履歴書の学歴欄 自動計算｜生年月日から入学・卒業の年月を和暦・西暦で(早生まれ対応・登録不要)</title>
+<meta name="description" content="生年月日と最終学歴を入れるだけで、履歴書の学歴欄に書く入学・卒業の年月を和暦と西暦で出します。早生まれ、浪人・留年、大学院、卒業見込みに対応。学校名も入れてそのままコピーできます。入力は保存しません。">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6465548593525933" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://hakoniwalab.com/resignation-letter-generator/rirekisho-gakureki/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="履歴書の学歴欄 自動計算 | HAKONIWA LAB">
+<meta property="og:description" content="生年月日と最終学歴から、入学・卒業の年月を和暦と西暦で出します。">
+<meta property="og:url" content="https://hakoniwalab.com/resignation-letter-generator/rirekisho-gakureki/">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"入力した生年月日や学校名はどこかに送られますか？","acceptedAnswer":{"@type":"Answer","text":"送られません。計算はすべてお使いの端末の中で行い、保存もしません。ページを閉じると消えます。"}},{"@type":"Question","name":"早生まれの計算はどうなっていますか？","acceptedAnswer":{"@type":"Answer","text":"1月1日〜4月1日生まれは、生まれた年の6年後の4月に小学校へ入学します。4月2日〜12月31日生まれは7年後の4月です。4月1日生まれが早生まれに入るのは、法律上の満年齢が誕生日の前日に上がるためです。"}},{"@type":"Question","name":"学歴欄はどこから書けばいいですか？","acceptedAnswer":{"@type":"Answer","text":"決まりはありません。一般には中学校の卒業か高校の入学から書くことが多く、応募先に指定があればそれに従います。このページでは小学校・中学校・高校のどこから書くかを選べます。"}},{"@type":"Question","name":"中高一貫校の場合は？","acceptedAnswer":{"@type":"Answer","text":"中学校と高校の行をそれぞれ書くのが一般的です。計算は同じです。"}},{"@type":"Question","name":"浪人や留年があるときは？","acceptedAnswer":{"@type":"Answer","text":"「高校卒業のあと、入学まであいた年数」と「長くかかった年数」を選ぶと、年が動きます。浪人や留年の事実そのものは学歴欄には書かなくてかまいません。入学と卒業の年月だけが並びます。"}},{"@type":"Question","name":"在学中はどう書きますか？","acceptedAnswer":{"@type":"Answer","text":"卒業の年月が今より先のときは「卒業見込み」、入学が先のときは「入学予定」と自動で出します。"}},{"@type":"Question","name":"和暦と西暦はどちらがいいですか？","acceptedAnswer":{"@type":"Answer","text":"どちらでもかまいません。職歴欄や日付の欄と同じ表記にそろえます。応募先の指定があればそれに従います。"}},{"@type":"Question","name":"平成31年4月と令和元年、どちらが正しいですか？","acceptedAnswer":{"@type":"Answer","text":"2019年4月は改元の前なので「平成31年4月」です。令和元年は2019年5月1日からです。学校の入学・卒業は3月と4月なので、令和元年の行は出ません。1989年の3月・4月は「平成元年」です。"}},{"@type":"Question","name":"転校・海外の学校・秋入学は？","acceptedAnswer":{"@type":"Answer","text":"このページは日本の学校に4月入学・3月卒業で通った場合の計算です。転校や海外の学校、秋入学は、出てきた表をコピーして手で直してください。"}}]}</script>
+<style>
+.gk-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.gk-style { display: flex; gap: 16px; font-size: 0.95rem; }
+.gk-style label { display: inline-flex; gap: 4px; align-items: center; font-weight: 400; margin: 0; }
+.gk-t { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.gk-t th, .gk-t td { border: 1px solid var(--color-border); padding: 7px 8px; text-align: left; }
+.gk-t th:nth-child(2), .gk-t td:nth-child(2) { text-align: center; white-space: nowrap; }
+.gk-t td:first-child { white-space: nowrap; }
+.gk-note { font-size: 0.9rem; text-align: left; margin: 0 0 10px; }
+.gk-simple { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.gk-simple th, .gk-simple td { border: 1px solid var(--color-border); padding: 7px 8px; text-align: left; }
+#gk-result { text-align: left; }
+.gk-names { border: 1px solid var(--color-border); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; text-align: left; }
+.gk-names summary { cursor: pointer; font-weight: 700; font-size: 0.9rem; }
+.gk-names .form-field { margin-top: 8px; }
+</style>
+</head>
+<body>
+<div id="app" class="app">
+
+  <nav class="crumb"><a href="../../">HAKONIWA LAB</a> ／ <a href="../">退職願・退職届 自動作成</a> ／ 履歴書の学歴欄</nav>
+
+  <header class="app-header">
+    <p class="app-header__eyebrow">生年月日を入れるだけ</p>
+    <h1 class="app-header__title">履歴書の学歴欄<br>自動計算</h1>
+    <p class="app-header__lead">入学と卒業の年月を、和暦・西暦で出します。早生まれ、浪人・留年、大学院、卒業見込みにも対応しています。</p>
+  </header>
+
+  <main id="main" class="main">
+    <section class="screen">
+      <div class="card card--intro">
+        <form id="gk-form" autocomplete="off">
+          <div class="form-field"><label for="gk-birth">生年月日</label><input type="date" id="gk-birth" class="quiz-select" min="1940-01-01"></div>
+          <div class="gk-row2">
+            <div class="form-field"><label for="gk-last">最終学歴</label><select id="gk-last" class="quiz-select"></select></div>
+            <div class="form-field"><label for="gk-from">どこから書くか</label>
+              <select id="gk-from" class="quiz-select">
+                <option value="ko">中学校の卒業から</option>
+                <option value="chu">中学校の入学から</option>
+                <option value="sho">小学校の入学から</option>
+              </select></div>
+          </div>
+          <div class="gk-row2">
+            <div class="form-field" id="gk-w-ronin"><label for="gk-ronin">高校卒業のあと、入学まであいた年数</label><select id="gk-ronin" class="quiz-select"></select></div>
+            <div class="form-field" id="gk-w-ryunen"><label for="gk-ryunen">最後の学校で長くかかった年数</label><select id="gk-ryunen" class="quiz-select"></select></div>
+          </div>
+          <div class="form-field"><span class="form-label">表記</span>
+            <div class="gk-style">
+              <label><input type="radio" name="gk-style" value="wareki" checked> 和暦</label>
+              <label><input type="radio" name="gk-style" value="seireki"> 西暦</label>
+            </div></div>
+          <details class="gk-names"><summary>学校名も入れる(なくても大丈夫)</summary>
+            <div class="form-field" id="gk-w-sho"><label for="gk-sho">小学校</label><input type="text" id="gk-sho" class="quiz-select" maxlength="40" placeholder="例: ○○市立△△小学校"></div>
+            <div class="form-field" id="gk-w-chu"><label for="gk-chu">中学校</label><input type="text" id="gk-chu" class="quiz-select" maxlength="40" placeholder="例: ○○市立△△中学校"></div>
+            <div class="form-field" id="gk-w-ko"><label for="gk-ko">高校</label><input type="text" id="gk-ko" class="quiz-select" maxlength="60" placeholder="例: 東京都立△△高等学校 普通科"></div>
+            <div class="form-field" id="gk-w-next"><label for="gk-next">大学・短大・専門学校など</label><input type="text" id="gk-next" class="quiz-select" maxlength="60" placeholder="例: △△大学 経済学部 経済学科"></div>
+            <div class="form-field" id="gk-w-grad"><label for="gk-grad">大学院</label><input type="text" id="gk-grad" class="quiz-select" maxlength="60" placeholder="例: △△大学大学院 工学研究科"></div>
+          </details>
+          <p id="gk-error" class="form-error" hidden></p>
+          <button type="submit" class="btn btn--primary btn--large">学歴欄を作る</button>
+        </form>
+        <p class="intro-disclaimer">※ 計算はすべて端末の中で行います。生年月日や学校名は保存せず、外部にも送りません。</p>
+      </div>
+
+      <div class="card" id="gk-result" hidden>
+        <p id="gk-note" class="gk-note"></p>
+        <div class="table-scroll"><table class="gk-t"><thead><tr><th>年</th><th>月</th><th>学歴</th></tr></thead><tbody id="gk-table"></tbody></table></div>
+        <p class="item__note">コピーすると「年・月・学歴」がタブ区切りになり、Excelの表やWordの表にそのまま貼れます。転校や海外の学校、秋入学は手で直してください。</p>
+        <button type="button" id="gk-copy" class="btn btn--primary btn--large">コピーする</button>
+      </div>
+    </section>
+
+    <div class="card card--article">
+      <h2>入学の年の決まり方</h2>
+      <p>学校教育法17条は、満6歳になった日の翌日以後の最初の学年の初めから小学校に通わせると決めています。満年齢は誕生日の前日の終わりに1つ増える(年齢計算ニ関スル法律と民法143条)ので、4月1日生まれは3月31日に満6歳になり、翌日の4月1日に入学します。4月2日生まれは4月1日に満6歳になるので、1年待って次の4月に入学します。</p>
+      <div class="table-scroll"><table class="gk-simple"><thead><tr><th>誕生日</th><th>小学校の入学</th></tr></thead><tbody>
+            <tr><th>1月1日〜4月1日</th><td>生まれた年の6年後の4月</td></tr>
+            <tr><th>4月2日〜12月31日</th><td>生まれた年の7年後の4月</td></tr>
+      </tbody></table></div>
+      <h2 style="margin-top:18px">そこから先の年数</h2>
+      <div class="table-scroll"><table class="gk-simple"><thead><tr><th>行</th><th>年月</th></tr></thead><tbody>
+            <tr><th>中学校の入学</th><td>小学校の入学の6年後の4月</td></tr>
+            <tr><th>高校の入学</th><td>小学校の入学の9年後の4月</td></tr>
+            <tr><th>高校の卒業</th><td>小学校の入学の12年後の3月</td></tr>
+            <tr><th>大学の入学(現役)</th><td>小学校の入学の12年後の4月</td></tr>
+            <tr><th>4年制大学の卒業</th><td>小学校の入学の16年後の3月</td></tr>
+            <tr><th>短大・2年制専門学校の卒業</th><td>小学校の入学の14年後の3月</td></tr>
+            <tr><th>大学院(修士)の修了</th><td>小学校の入学の18年後の3月</td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="card card--article">
+      <h2>学歴欄を書くときの決まりごと</h2>
+      <ul>
+        <li>上の行から古い順に書きます。</li>
+        <li>学校名は略さずに書きます。「高校」ではなく「高等学校」と書き、学部・学科まで入れます。</li>
+        <li>大学院は「卒業」ではなく「修了」と書きます。</li>
+        <li>和暦か西暦かは、履歴書全体でそろえます。</li>
+        <li>在学中は卒業の予定の年月に「卒業見込み」と書きます。</li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>よくある質問</h2>
+      <details class="faq-item"><summary>入力した生年月日や学校名はどこかに送られますか？</summary><p>送られません。計算はすべてお使いの端末の中で行い、保存もしません。ページを閉じると消えます。</p></details>
+      <details class="faq-item"><summary>早生まれの計算はどうなっていますか？</summary><p>1月1日〜4月1日生まれは、生まれた年の6年後の4月に小学校へ入学します。4月2日〜12月31日生まれは7年後の4月です。4月1日生まれが早生まれに入るのは、法律上の満年齢が誕生日の前日に上がるためです。</p></details>
+      <details class="faq-item"><summary>学歴欄はどこから書けばいいですか？</summary><p>決まりはありません。一般には中学校の卒業か高校の入学から書くことが多く、応募先に指定があればそれに従います。このページでは小学校・中学校・高校のどこから書くかを選べます。</p></details>
+      <details class="faq-item"><summary>中高一貫校の場合は？</summary><p>中学校と高校の行をそれぞれ書くのが一般的です。計算は同じです。</p></details>
+      <details class="faq-item"><summary>浪人や留年があるときは？</summary><p>「高校卒業のあと、入学まであいた年数」と「長くかかった年数」を選ぶと、年が動きます。浪人や留年の事実そのものは学歴欄には書かなくてかまいません。入学と卒業の年月だけが並びます。</p></details>
+      <details class="faq-item"><summary>在学中はどう書きますか？</summary><p>卒業の年月が今より先のときは「卒業見込み」、入学が先のときは「入学予定」と自動で出します。</p></details>
+      <details class="faq-item"><summary>和暦と西暦はどちらがいいですか？</summary><p>どちらでもかまいません。職歴欄や日付の欄と同じ表記にそろえます。応募先の指定があればそれに従います。</p></details>
+      <details class="faq-item"><summary>平成31年4月と令和元年、どちらが正しいですか？</summary><p>2019年4月は改元の前なので「平成31年4月」です。令和元年は2019年5月1日からです。学校の入学・卒業は3月と4月なので、令和元年の行は出ません。1989年の3月・4月は「平成元年」です。</p></details>
+      <details class="faq-item"><summary>転校・海外の学校・秋入学は？</summary><p>このページは日本の学校に4月入学・3月卒業で通った場合の計算です。転校や海外の学校、秋入学は、出てきた表をコピーして手で直してください。</p></details>
+    </div>
+
+    <div class="card card--article">
+      <h2>関連ページ</h2>
+      <ul>
+        <li><a href="../">退職願・退職届 自動作成ツール</a> — いまの会社を辞めるときの書類</li>
+        <li><a href="../../career-checker/">転職エージェント診断</a> — 履歴書の次に、転職の相談先を選ぶ</li>
+        <li><a href="../../retirement-simulator/taishokubi/">退職日で変わるお金</a> — 辞める日を決める前に</li>
+      </ul>
+    </div>
+
+    <div class="card card--article">
+      <h2>参考にした資料</h2>
+      <ul class="sources">
+        <li><a href="https://laws.e-gov.go.jp/law/322AC0000000026" target="_blank" rel="noopener">e-Gov法令検索「学校教育法」</a>(第17条 就学させる義務)</li>
+        <li>年齢計算ニ関スル法律(明治35年法律第50号)、民法第143条(年齢の計算)</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- site-nav:start -->
+  <style>
+  .site-nav { margin: 40px 0 0; padding: 22px 0 0; border-top: 1px solid var(--color-border, var(--line, #dbcba0)); color: var(--color-text, var(--ink, #2b2620)); text-align: left; }
+  .site-nav__title { margin: 0 0 14px; font-size: 0.82rem; font-weight: 700; color: var(--color-text-muted, var(--muted, #6e6248)); }
+  .site-nav__title a { font-family: Georgia, "Times New Roman", serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--color-text, var(--ink, #2b2620)); text-decoration: none; }
+  .site-nav__groups { display: grid; gap: 14px 24px; }
+  @media (min-width: 560px) { .site-nav__groups { grid-template-columns: 1fr 1fr; } }
+  .site-nav__label { margin: 0 0 4px; font-size: 0.74rem; font-weight: 700; color: var(--color-text-muted, var(--muted, #6e6248)); }
+  .site-nav__links { display: flex; flex-wrap: wrap; gap: 2px 14px; margin: 0; padding: 0; list-style: none; font-size: 0.86rem; line-height: 1.7; }
+  .site-nav__links li { margin: 0; padding: 0; }
+  .site-nav__links li::before { content: none; }
+  .site-nav__links a { color: var(--color-primary, var(--navy, #a8631f)); }
+  .site-nav__all { margin: 16px 0 0; font-size: 0.86rem; text-align: right; }
+  .site-nav__all a { color: var(--color-primary, var(--navy, #a8631f)); font-weight: 700; }
+  .app-footer a { color: var(--color-text-muted, var(--muted, #6e6248)); }
+  </style>
+  <nav class="site-nav" aria-label="HAKONIWA LABのツール">
+    <p class="site-nav__title"><a href="../../">HAKONIWA LAB</a> の無料ツール</p>
+    <div class="site-nav__groups">
+      <div>
+        <p class="site-nav__label">家族を見送ったあとに</p>
+        <ul class="site-nav__links">
+          <li><a href="../../houyou-calendar/">法要日程カレンダー</a></li>
+          <li><a href="../../houyou-calendar/hayami/">年忌早見表</a></li>
+          <li><a href="../../houyou-calendar/tetsuzuki/">死亡後の手続きの期限</a></li>
+          <li><a href="../../houyou-calendar/pet/">ペットの法要</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">仕事を辞めるとき・変えるとき</p>
+        <ul class="site-nav__links">
+          <li><a href="../../resignation-letter-generator/">退職願・退職届を作る</a></li>
+          <li><a href="../../retirement-simulator/">退職金の手取り</a></li>
+          <li><a href="../../subsidy-checker/">使える給付金を探す</a></li>
+          <li><a href="../../career-checker/">転職エージェントを選ぶ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">収入と税金を知りたいとき</p>
+        <ul class="site-nav__links">
+          <li><a href="../../takehome-calculator/">手取り年収</a></li>
+          <li><a href="../../furusato-simulator/">ふるさと納税の上限額</a></li>
+          <li><a href="../../sidejob-tax-simulator/">副業の税金</a></li>
+          <li><a href="../../sidejob-checker/">向いている副業</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">備えと資産</p>
+        <ul class="site-nav__links">
+          <li><a href="../../insurance-checker/">必要な保険</a></li>
+          <li><a href="../../retirement-simulator/ideco/">iDeCoの受け取り方</a></li>
+          <li><a href="../../stock-screener/">株の条件検索</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="site-nav__label">暦と楽しみ</p>
+        <ul class="site-nav__links">
+          <li><a href="../../birthday-fortune/">生まれ日診断</a></li>
+          <li><a href="../../birthday-fortune/calendar/">吉日カレンダー</a></li>
+          <li><a href="../../meguri-log/">めぐった場所の記録</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="site-nav__all"><a href="../../">すべてのツールを見る →</a></p>
+  </nav>
+  <!-- site-nav:end -->
+
+  <footer class="app-footer">
+    <p>本サイトは履歴書の作成の補助を目的としたものです。実際の入学・卒業の年月は卒業証書などで確かめてください。</p>
+    <p><a href="../../about.html">運営者情報</a>・<a href="../../contact.html">お問い合わせ</a>・<a href="../../privacy.html">プライバシーポリシー</a></p>
+  </footer>
+
+</div>
+<script src="../js/gakureki.js"></script>
+</body>
+</html>
